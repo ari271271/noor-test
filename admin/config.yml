@@ -7,10 +7,15 @@ media_folder: "photo"
 public_folder: "/photo"
 
 collections:
-  - name: "test"
-    label: "Test Ürünleri"
+  - name: "products"
+    label: "Ürünler"
     folder: "content"
     create: true
+    slug: "{{fields.title}}"
     fields:
       - { label: "Başlık", name: "title", widget: "string" }
-      - { label: "Açıklama", name: "body", widget: "markdown" }
+      - { label: "Görsel", name: "image", widget: "image" }
+      - label: "Özellikler"
+        name: "features"
+        widget: "list"
+        field: { label: "Özellik", name: "feature", widget: "string" }
