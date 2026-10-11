@@ -1,0 +1,16 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+
+media_folder: "photo"
+public_folder: "/photo"
+
+collections:
+  - name: "test"
+    label: "Test Ürünleri"
+    folder: "content"
+    create: true
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Açıklama", name: "body", widget: "markdown" }
